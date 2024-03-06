@@ -29,7 +29,8 @@ import com.mr.tApps.orderservice.util.PaymentStatus;
 import java.time.Instant;
 
 @Service
-@RequiredArgsConstructor
+// @RequiredArgsConstructor
+@AllArgsConstructor
 public class OrderServiceImpl implements OrderService {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(OrderServiceImpl.class);
@@ -38,10 +39,10 @@ public class OrderServiceImpl implements OrderService {
 
     private final RestTemplate restTemplate = new RestTemplate();
 
-    private final ProductService productService;
-
     // service called as kafka consumer
     private final PaymentService paymentService;
+
+    private final ProductService productService;
 
     // private final KafkaTemplate<String, PaymentRequest> kafkaTemplate;
 
