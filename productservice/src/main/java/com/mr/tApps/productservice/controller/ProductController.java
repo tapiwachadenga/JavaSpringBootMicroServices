@@ -4,6 +4,7 @@ import com.mr.tApps.productservice.model.Product;
 import com.mr.tApps.productservice.payload.request.ProductRequest;
 import com.mr.tApps.productservice.payload.response.ProductResponse;
 import com.mr.tApps.productservice.service.ProductService;
+import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,7 +14,8 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/product")
-@RequiredArgsConstructor
+// @RequiredArgsConstructor
+@AllArgsConstructor
 public class ProductController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ProductController.class);

@@ -5,6 +5,7 @@ import com.mr.tApps.orderservice.payload.response.OrderResponse;
 import com.mr.tApps.orderservice.service.OrderService;
 import com.mr.tApps.orderservice.service.OrderServiceImpl;
 import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
@@ -13,7 +14,8 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/order")
-@AllArgsConstructor
+@RequiredArgsConstructor
+// @AllArgsConstructor
 public class OrderController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(OrderServiceImpl.class);
